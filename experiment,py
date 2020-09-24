@@ -1,0 +1,17 @@
+from collections import OrderedDict
+from catalyst.dl import ConfigExperiment
+from data import *
+
+
+class Experiment(ConfigExperiment):
+    def get_datasets(self, stage: str, **kwargs):
+        datasets = OrderedDict()
+
+        train = train_loader
+
+        valid = valid_loader 
+
+        datasets['train'] = train
+        datasets['valid'] = valid
+
+        return datasets
